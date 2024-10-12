@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alegreya', serif;
+}
+
+.home {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Dark text color for contrast */
+    background-image: url('../components/assets/background.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensure the image covers the entire div */
+    background-position: center; /* Center the image */
+    height: 400px; /* Set a height for the div */
+    position: relative; /* Add relative positioning */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.welcome-message {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #388de2; /* Blue color for the welcome message */
+}
+
+.home-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto; /* Center the description */
+    padding: 0 20px; /* Padding on the sides for smaller screens */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .welcome-message {
+        font-size: 2rem; /* Adjust font size for mobile screens */
+    }
+
+    .home-description {
+        font-size: 1rem; /* Adjust font size for mobile screens */
+    }
+}

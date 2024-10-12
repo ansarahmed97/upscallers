@@ -1,12 +1,12 @@
 import React from 'react';
-import '../styles/ProductCard.css'; // Correctly reference the CSS file in the styles folder
+import '../styles/ProductCard.css';
 
 const ProductCard = ({ product }) => {
     return (
         <div className="product-card">
-            <img src={product.image} alt={product.name} />
-            <h2>{product.name}</h2>
-            <p>${product.price}</p>
+            <img src={product.image} alt={product.name} className="product-image" />
+            <h3>{product.name}</h3>
+            <p>Price: ${product.price}</p>
         </div>
     );
 };

@@ -1,21 +1,12 @@
 .product-card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 1px solid #ddd; /* Add border to the card */
+    border-radius: 5px; /* Rounded corners */
     padding: 10px;
-    margin: 10px;
-    width: 200px;
-    text-align: center;
+    text-align: center; /* Center the content */
+    margin: 10px; /* Space between cards */
 }
 
-.product-card img {
-    max-width: 100%;
-    height: auto;
-}
-
-.product-card h2 {
-    font-size: 1.2em;
-}
-
-.product-card p {
-    font-size: 1em;
+.product-image {
+    max-width: 100%; /* Make sure images are responsive */
+    height: auto; /* Maintain aspect ratio */
 }

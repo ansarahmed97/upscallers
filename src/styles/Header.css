@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #B3B4BD; /* Background color of the navbar */
+    color: #141619; /* Text color */
+    padding: 10px 20px;
+  }
+  
+  .navbar-brand {
+    margin-right: auto;
+    font-family: 'Alegreya', serif;
+    font-size: 1.5rem; /* Brand text size */
+  }
+  
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    font-family: 'Alegreya', serif;
+    font-size: 1.5rem; /* Menu text size */
+  }
+  
+  .navbar-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    color: #092834; /* Link color */
+    margin-left: 10px;
+    font-size: 1.2rem; /* Link size */
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .nav-item::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: black; /* Underline color */
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-item:hover::before {
+    width: 100%; /* Underline on hover */
+  }
+  
+  .navbar-toggle {
+    display: none; /* Hide toggle button for desktop */
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-toggle {
+      display: block; /* Show toggle button for small screens */
+    }
+    
+    .navbar-menu {
+      display: none; /* Hide menu by default on small screens */
+      position: absolute;
+      left: 0;
+      right: 0;
+      color: aliceblue; /* Text color for menu items */
+      background-color: #388de2; /* Background color for menu */
+      padding: 10px;
+      top: 45px; /* Positioning below the navbar */
+    }
+    
+    .show {
+      display: flex; /* Show menu when toggled */
+      flex-direction: column; /* Stack items in the menu */
+    }
+    
+    .navbar-nav {
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      text-align: center; /* Center align menu items */
+    }
+    
+    .nav-item {
+      margin-bottom: 10px; /* Margin between items */
+      color: azure; /* Change color of menu items */
+    }
+  }
+  

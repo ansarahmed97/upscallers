@@ -15,6 +15,7 @@ body {
     height: 400px; /* Set a height for the div */
     position: relative; /* Add relative positioning */
     overflow: hidden; /* Prevent overflow */
+    margin-top: 60px; /* Added margin to create space below the header */
 }
 
 .welcome-message {

@@ -2,14 +2,15 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px;
-    width: 200px;
+    margin: 10px;              /* Add margin around product cards */
+    width: 200px;              /* Fixed width for each card */
     text-align: center;
 }
 
 .product-card img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;               /* Set the width to fill the card */
+    height: 200px;             /* Fixed height for all images */
+    object-fit: cover;         /* Ensure the image covers the area without distortion */
 }
 
 .product-card h2 {
@@ -18,4 +19,33 @@
 
 .product-card p {
     font-size: 1em;
+}
+
+/* Existing responsive layout */
+.product-list {
+    display: flex;              
+    flex-wrap: wrap;           
+    justify-content: center;    
+    margin: 0;                 
+    padding: 10px;             
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .product-card {
+        width: calc(33.33% - 20px); /* 3 cards per row, accounting for margins */
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+    .product-card {
+        width: calc(50% - 20px); /* 2 cards per row on mobile */
+    }
+}
+
+@media (min-width: 1200px) {
+    .product-card {
+        width: calc(25% - 20px); /* 4 cards per row, accounting for margins */
+    }
 }

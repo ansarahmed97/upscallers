@@ -1,77 +1,103 @@
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar {
-    top: 0;
-    right: 0;
-    left: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #B3B4BD; /* Background color of the navbar */
-    color: #141619; /* Text color */
-    padding: 10px 20px;
-  }
-  
-  .navbar-brand {
-    margin-right: auto;
-    font-family: 'Alegreya', serif;
-    font-size: 1.5rem; /* Brand text size */
-  }
-  
-  .navbar-menu {
-    display: flex;
-    align-items: center;
-    font-family: 'Alegreya', serif;
-    font-size: 1.5rem; /* Menu text size */
-  }
-  
-  .navbar-nav {
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-item {
-    color: #092834; /* Link color */
-    margin-left: 10px;
-    font-size: 1.2rem; /* Link size */
-    margin: 10px;
-    position: relative;
-    cursor: pointer;
-    text-decoration: none;
-    list-style: none;
-  }
-  
-  .nav-item::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: black; /* Underline color */
-    bottom: -2px;
-    left: 0;
-    transition: width 0.3s ease;
-  }
-  
-  .nav-item:hover::before {
-    width: 100%; /* Underline on hover */
-  }
-  
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed; /* Fixed position to stay at the top */
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #B3B4BD; /* Background color of the navbar */
+  color: #141619; /* Text color */
+  padding: 10px 20px; /* Adjust padding if needed */
+  z-index: 1000; /* Ensure it is above other components */
+  height: 60px; /* Set a specific height */
+}
+
+.navbar-brand {
+  margin-right: auto;
+  font-family: 'Alegreya', serif;
+  font-size: 1.5rem; /* Brand text size */
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  font-family: 'Alegreya', serif;
+  font-size: 1.5rem; /* Menu text size */
+}
+
+.navbar-nav {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  color: #092834; /* Link color */
+  margin-left: 10px;
+  font-size: 1.2rem; /* Link size */
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-item::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: black; /* Underline color */
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::before {
+  width: 100%; /* Underline on hover */
+}
+
+.navbar-toggle {
+  display: none; /* Hide toggle button for desktop */
+  cursor: pointer;
+}
+
+/* Cart icon styles */
+.cart-icon {
+  position: relative; /* Positioning for count badge */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 1.5rem; /* Size of the cart icon */
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px; /* Position above the cart icon */
+  right: -10px; /* Position right of the icon */
+  background-color: red; /* Background color for count */
+  color: white; /* Text color */
+  border-radius: 50%; /* Circle shape */
+  width: 20px; /* Fixed width for the circle */
+  height: 20px; /* Fixed height for the circle */
+  display: flex; /* Use flexbox to center content */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  font-size: 0.9em; /* Font size */
+}
+
+
+@media (max-width: 768px) {
   .navbar-toggle {
-    display: none; /* Hide toggle button for desktop */
-    cursor: pointer;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar-toggle {
       display: block; /* Show toggle button for small screens */
-    }
-    
-    .navbar-menu {
+  }
+
+  .navbar-menu {
       display: none; /* Hide menu by default on small screens */
       position: absolute;
       left: 0;
@@ -79,23 +105,29 @@ body {
       color: aliceblue; /* Text color for menu items */
       background-color: #388de2; /* Background color for menu */
       padding: 10px;
-      top: 45px; /* Positioning below the navbar */
-    }
-    
-    .show {
+      top: 60px; /* Positioning below the navbar */
+      z-index: 999; /* Ensure it is above other components */
+      transition: max-height 0.3s ease; /* Smooth transition for visibility */
+      max-height: 0; /* Start hidden */
+      overflow: hidden; /* Prevent overflow */
+  }
+
+  .show {
       display: flex; /* Show menu when toggled */
       flex-direction: column; /* Stack items in the menu */
-    }
-    
-    .navbar-nav {
+      align-items: center; /* Center align items */
+      max-height: 300px; /* Set a max height for the menu */
+  }
+
+  .navbar-nav {
       display: flex;
       flex-direction: column; /* Stack items vertically */
       text-align: center; /* Center align menu items */
-    }
-    
-    .nav-item {
-      margin-bottom: 10px; /* Margin between items */
-      color: azure; /* Change color of menu items */
-    }
   }
-  
+
+  .nav-item {
+      margin: 10px 0; /* Margin between items */
+      color: white; /* Change color of menu items for visibility */
+      font-size: 1.2rem; /* Adjust size if needed */
+  }
+}

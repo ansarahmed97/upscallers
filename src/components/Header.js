@@ -25,7 +25,7 @@ function Navbar({ cartCount, onHomeClick, onProductsClick, onAboutClick, onCartC
 
     return (
         <nav className="navbar">
-            <div className="navbar-brand">Upscallers</div>
+            <div className="navbar-brand">Upscalers</div>
             <div className={`navbar-menu ${isNavbarOpen ? 'show' : ''}`}>
                 <ul className="navbar-nav">
                     <li className="nav-item" onClick={() => handleNavigation('home')}>

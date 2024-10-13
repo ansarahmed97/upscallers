@@ -1,36 +1,43 @@
 .product-card {
     border: 1px solid #ddd; /* Add border to the card */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
     text-align: center; /* Center the content */
     margin: 10px; /* Space between cards */
     transition: transform 0.2s; /* Smooth hover effect */
+    background-color: #ffffff; /* White background for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .product-card:hover {
     transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 .product-image {
     max-width: 100%; /* Make sure images are responsive */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
 }
 
 .button-container {
     display: flex; /* Use flexbox for alignment */
     justify-content: space-between; /* Space between buttons */
-    margin-top: 10px; /* Space above buttons */
+    margin-top: 15px; /* Space above buttons */
 }
 
+/* General button styles */
 button {
     border: none; /* Remove default border */
     border-radius: 5px; /* Rounded corners for buttons */
-    padding: 10px 15px; /* Padding inside buttons */
+    padding: 10px 15px;
+    margin: 5px; /* Padding inside buttons */
     cursor: pointer; /* Change cursor on hover */
     font-size: 1em; /* Font size */
-    transition: background-color 0.2s; /* Smooth transition */
+    transition: background-color 0.2s, transform 0.2s; /* Smooth transition */
 }
 
+/* Button color combinations */
 .buy-now {
     background-color: #4CAF50; /* Green background */
     color: white; /* White text */
@@ -41,8 +48,10 @@ button {
     color: white; /* White text */
 }
 
+/* Hover effects for buttons */
 button:hover {
-    opacity: 0.8; /* Slightly transparent on hover */
+    opacity: 0.9; /* Slightly transparent on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
 }
 
 /* Media queries for responsive design */

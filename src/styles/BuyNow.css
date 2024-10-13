@@ -1,13 +1,13 @@
 /* BuyNow.css */
 
 .buy-now {
-    padding: 20px;
+    padding: 30px; /* Increased padding for better spacing */
     max-width: 800px; /* Limit width on larger screens */
-    margin: auto; /* Center the content */
+    margin: 50px auto 0; /* Add top margin and center the content */
     text-align: center; /* Center the text */
-    background-color: #f9f9f9; /* Light background color */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #ffffff; /* White background for a clean look */
+    border-radius: 15px; /* Slightly larger border radius for rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow for depth */
 }
 
 .buy-now img {
@@ -18,53 +18,56 @@
 }
 
 .buy-now h2 {
-    font-size: 2rem; /* Large title size */
-    margin-bottom: 15px; /* Space below title */
+    font-size: 2.5rem; /* Larger title size for emphasis */
+    color: #333; /* Dark gray color for titles */
+    margin-bottom: 20px; /* Space below title */
 }
 
 .buy-now h3 {
-    font-size: 1.5rem; /* Medium title size */
+    font-size: 1.8rem; /* Increased size for product name */
+    color: #555; /* Medium gray color for product name */
     margin: 10px 0; /* Space around name */
 }
 
 .buy-now p {
-    font-size: 1.25rem; /* Price size */
+    font-size: 1.5rem; /* Price size */
+    color: #4CAF50; /* Green color for the price */
     margin: 15px 0; /* Space around price */
 }
 
 .buy-now button {
-    padding: 12px 24px; /* Increased button padding */
-    font-size: 1rem; /* Button text size */
+    padding: 12px 24px; /* Button padding */
+    font-size: 1.1rem; /* Button text size */
     margin: 10px; /* Space between buttons */
     border: none; /* Remove default border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer on hover */
     transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
-    background-color: #007bff; /* Button background color */
-    color: white; /* Button text color */
+    background-color: #007bff; /* Blue background for buttons */
+    color: white; /* White text color */
 }
 
 .buy-now button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
 }
 
 /* Responsive styles */
 @media (max-width: 600px) {
     .buy-now h2 {
-        font-size: 1.5rem; /* Smaller title size */
+        font-size: 1.8rem; /* Smaller title size for mobile */
     }
 
     .buy-now h3 {
-        font-size: 1.25rem; /* Smaller product name */
+        font-size: 1.4rem; /* Smaller product name for mobile */
     }
 
     .buy-now p {
-        font-size: 1rem; /* Smaller price size */
+        font-size: 1.2rem; /* Smaller price size for mobile */
     }
 
     .buy-now button {
-        font-size: 0.9rem; /* Smaller button text */
+        font-size: 1rem; /* Smaller button text for mobile */
         padding: 10px 20px; /* Smaller button padding */
     }
 }

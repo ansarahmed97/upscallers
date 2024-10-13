@@ -1,33 +1,46 @@
 .product-card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;              /* Add margin around product cards */
-    width: 200px;              /* Fixed width for each card */
-    text-align: center;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Slightly larger border-radius for a softer look */
+    padding: 15px; /* Increased padding for better spacing */
+    margin: 10px; /* Add margin around product cards */
+    width: 200px; /* Fixed width for each card */
+    text-align: center; /* Center text alignment */
+    background-color: #ffffff; /* White background for a clean look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 .product-card img {
-    width: 100%;               /* Set the width to fill the card */
-    height: 200px;             /* Fixed height for all images */
-    object-fit: cover;         /* Ensure the image covers the area without distortion */
+    width: 100%; /* Set the width to fill the card */
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 5px; /* Rounded corners for images */
 }
 
 .product-card h2 {
-    font-size: 1.2em;
+    font-size: 1.4em; /* Slightly larger font size for titles */
+    color: #333; /* Dark gray color for the title */
+    margin: 10px 0; /* Margin above and below the title */
 }
 
 .product-card p {
-    font-size: 1em;
+    font-size: 1em; /* Standard font size for descriptions */
+    color: #666; /* Medium gray color for text */
+    margin: 5px 0; /* Margin for spacing */
 }
 
 /* Existing responsive layout */
 .product-list {
-    display: flex;              
-    flex-wrap: wrap;           
-    justify-content: center;    
-    margin: 0;                 
-    padding: 10px;             
+    display: flex; /* Flexbox layout for the product list */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center the cards */
+    margin: 0; /* Reset default margin */
+    padding: 10px; /* Padding around the product list */
 }
 
 /* Media query for larger screens */
@@ -44,6 +57,7 @@
     }
 }
 
+/* Media query for extra large screens */
 @media (min-width: 1200px) {
     .product-card {
         width: calc(25% - 20px); /* 4 cards per row, accounting for margins */

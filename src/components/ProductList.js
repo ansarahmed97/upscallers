@@ -25,11 +25,16 @@ const products = [
 ];
 
 // ProductList component
-const ProductList = ({ addToCart }) => {
+const ProductList = ({ addToCart, onBuyNow }) => {
     return (
         <div className="product-list">
             {products.map(product => (
-                <ProductCard key={product.id} product={product} addToCart={addToCart} />
+                <ProductCard 
+                    key={product.id} 
+                    product={product} 
+                    addToCart={addToCart} 
+                    onBuyNow={onBuyNow} // Pass the Buy Now function
+                />
             ))}
         </div>
     );

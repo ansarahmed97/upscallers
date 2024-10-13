@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/upscallers/static/css/main.004c0101.css",
+    "main.js": "/upscallers/static/js/main.da349d1e.js",
+    "static/media/image8.jpg": "/upscallers/static/media/image8.1e2ac7a9f4afbb4399bc.jpg",
+    "static/media/upscalelogo.png": "/upscallers/static/media/upscalelogo.b4a13b1e46e0ac7c180f.png",
+    "static/media/image6.jpg": "/upscallers/static/media/image6.e35a33cd6c9589cfc5e8.jpg",
+    "static/media/image5.jpg": "/upscallers/static/media/image5.93a0d73e69391a021a66.jpg",
+    "static/media/image9.jpg": "/upscallers/static/media/image9.55dca2804e3f07561857.jpg",
+    "static/media/image3.jpg": "/upscallers/static/media/image3.d3827a88029c4ab65774.jpg",
+    "static/media/image4.jpg": "/upscallers/static/media/image4.f5a2ba3521c09627e72b.jpg",
+    "static/media/image2.jpg": "/upscallers/static/media/image2.ad24daee08725242bcc7.jpg",
+    "static/media/image1.jpg": "/upscallers/static/media/image1.2b57b865df29b5922308.jpg",
+    "static/media/image7.jpg": "/upscallers/static/media/image7.91619cd1977334129414.jpg",
+    "static/media/background.jpeg": "/upscallers/static/media/background.48d3cd2b7bd592b941ed.jpeg",
+    "index.html": "/upscallers/index.html",
+    "main.004c0101.css.map": "/upscallers/static/css/main.004c0101.css.map",
+    "main.da349d1e.js.map": "/upscallers/static/js/main.da349d1e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.004c0101.css",
+    "static/js/main.da349d1e.js"
+  ]
+}

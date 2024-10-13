@@ -3,7 +3,7 @@ import '../styles/Home.css'; // Import the CSS file for styling
 
 const Home = () => {
     return (
-        <div className="home">
+        <div id="home" className="home"> {/* Add id="home" here */}
             <h1 className="welcome-message">Welcome to Upscallers</h1>
             <p className="home-description">
                 At Upscallers, we believe that fashion is not just about clothing; it's about expressing yourself. 

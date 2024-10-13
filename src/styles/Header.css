@@ -8,15 +8,15 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #B3B4BD; /* Background color of the navbar */
+  background-color: rgba(179, 180, 189, 0.9); /* Slightly transparent background color */
   color: #141619; /* Text color */
   padding: 10px 20px; /* Adjust padding if needed */
   z-index: 1000; /* Ensure it is above other components */
   height: 60px; /* Set a specific height */
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
 }
 
 .navbar-brand {
@@ -26,44 +26,32 @@ body {
 }
 
 .navbar-menu {
-  display: flex;
-  align-items: center;
-  font-family: 'Alegreya', serif;
-  font-size: 1.5rem; /* Menu text size */
+  display: flex; /* Display the menu in a row for larger screens */
+  align-items: center; /* Center items vertically */
+  margin-left: auto; /* Push menu to the right */
 }
 
 .navbar-nav {
-  display: flex;
-  margin: 0;
-  padding: 0;
+  display: flex; /* Use flexbox for nav items */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
 }
 
 .nav-item {
   color: #092834; /* Link color */
-  margin-left: 10px;
-  font-size: 1.2rem; /* Link size */
-  margin: 10px;
-  position: relative;
-  cursor: pointer;
-  text-decoration: none;
-  list-style: none;
+  margin: 0 10px; /* Margin between items */
+  font-size: 1.2rem; /* Adjust font size if needed */
+  cursor: pointer; /* Change cursor on hover */
+  text-decoration: none; /* Remove underline */
+  list-style: none; /* Remove list style */
 }
 
-.nav-item::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: black; /* Underline color */
-  bottom: -2px;
-  left: 0;
-  transition: width 0.3s ease;
+/* Remove underline on hover */
+.nav-item:hover {
+  color: #fcfcfc; /* Change color on hover */
 }
 
-.nav-item:hover::before {
-  width: 100%; /* Underline on hover */
-}
-
+/* Toggle button styles */
 .navbar-toggle {
   display: none; /* Hide toggle button for desktop */
   cursor: pointer;
@@ -91,43 +79,44 @@ body {
   font-size: 0.9em; /* Font size */
 }
 
-
 @media (max-width: 768px) {
-  .navbar-toggle {
-      display: block; /* Show toggle button for small screens */
-  }
-
   .navbar-menu {
-      display: none; /* Hide menu by default on small screens */
-      position: absolute;
-      left: 0;
-      right: 0;
-      color: aliceblue; /* Text color for menu items */
-      background-color: #388de2; /* Background color for menu */
-      padding: 10px;
-      top: 60px; /* Positioning below the navbar */
-      z-index: 999; /* Ensure it is above other components */
-      transition: max-height 0.3s ease; /* Smooth transition for visibility */
-      max-height: 0; /* Start hidden */
-      overflow: hidden; /* Prevent overflow */
+    display: none; /* Hide menu by default on small screens */
+    position: absolute; /* Absolute positioning for the dropdown */
+    left: 0;
+    right: 0;
+    color: rgb(0, 0, 0); /* Text color for menu items */
+    background-color: rgba(128, 130, 146, 0.9); /* Slightly transparent background for menu */
+    padding: 10px; /* Padding for menu items */
+    top: 60px; /* Positioning below the navbar */
+    z-index: 999; /* Ensure it is above other components */
+    transition: max-height 0.3s ease, opacity 0.5s ease; /* Smooth transition for visibility and opacity */
+    max-height: 0; /* Start hidden */
+    overflow: hidden; /* Prevent overflow */
+    opacity: 0; /* Start with opacity 0 */
   }
 
-  .show {
-      display: flex; /* Show menu when toggled */
-      flex-direction: column; /* Stack items in the menu */
-      align-items: center; /* Center align items */
-      max-height: 300px; /* Set a max height for the menu */
+  .navbar-menu.show {
+    display: flex; /* Show menu when toggled */
+    flex-direction: column; /* Stack items in the menu */
+    align-items: center; /* Center align items */
+    max-height: 300px; /* Set a max height for the menu */
+    opacity: 1; /* Fade in */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show toggle button for small screens */
   }
 
   .navbar-nav {
-      display: flex;
-      flex-direction: column; /* Stack items vertically */
-      text-align: center; /* Center align menu items */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center align menu items */
   }
 
   .nav-item {
-      margin: 10px 0; /* Margin between items */
-      color: white; /* Change color of menu items for visibility */
-      font-size: 1.2rem; /* Adjust size if needed */
+    margin: 10px 0; /* Margin between items */
+    color: rgb(0, 0, 0); /* Change color of menu items for visibility */
+    font-size: 1.2rem; /* Adjust size if needed */
   }
 }

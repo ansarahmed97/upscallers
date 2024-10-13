@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Header.css';
 
-function Navbar({ cartCount, onPageChange }) { // Accept cartCount as a prop
+function Navbar({ cartCount, onHomeClick, onProductsClick, onAboutClick, onCartClick }) {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+    const navigate = useNavigate();
 
     const handleNavbarToggle = () => {
         setIsNavbarOpen(!isNavbarOpen);
@@ -10,7 +12,15 @@ function Navbar({ cartCount, onPageChange }) { // Accept cartCount as a prop
 
     const handleNavigation = (page) => {
         setIsNavbarOpen(false);
-        onPageChange(page);
+        if (page === 'home') {
+            onHomeClick(); // Trigger scroll to Home section
+        } else if (page === 'products') {
+            onProductsClick(); // Trigger scroll to Product List section
+        } else if (page === 'about') {
+            onAboutClick(); // Trigger About section to open
+        } else if (page === 'cart') {
+            onCartClick(); // Trigger Cart section to open
+        }
     };
 
     return (
@@ -37,7 +47,7 @@ function Navbar({ cartCount, onPageChange }) { // Accept cartCount as a prop
             </div>
             <div className="cart-icon">
                 <i className="fa-solid fa-shopping-cart"></i>
-                {cartCount > 0 && <span className="cart-count">{cartCount}</span>} {/* Show count only if > 0 */}
+                {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
             </div>
         </nav>
     );
